@@ -1,0 +1,128 @@
+body{
+	max-width: 1745px;
+	max-height: 1164px;	   
+	margin: 0 auto;
+    width: 80%;   
+    background: url(img/Background.png); 
+    color: #FFFFFF;
+}
+
+.main__title{
+	font: normal bold 57px/67px Roboto;	
+	margin-bottom: 0;
+}
+.main__description{
+	font: normal bold 19px/22px Roboto;
+}
+.main__list{
+	font: normal bold 50px/59px Roboto;
+}
+.main__list li {
+    list-style-type: none; 
+    position: relative;
+ }
+
+.main__list li:hover::before, .main__list li:active::before, .active::before {
+	content: "";
+    width: 18px;
+    height: 18px;
+    background: #D62B2E;
+    position: absolute;
+    top: 19px;
+    left: -36px;
+    transform: rotate(45deg);    
+ }
+.main__list li:hover{
+	cursor: pointer;
+    opacity: .7;   
+}
+.main__footer{
+	display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.main__btn{
+	width: 352px;
+	height: 95px;
+	background: #D62B2E;
+	border-radius: 7px;
+	border-width: 0;
+	font: normal bold 32px/37px Roboto;    
+    color: white;
+}
+.main__btn:hover{
+	cursor: pointer;
+    opacity: .9;
+    transition-delay: 0.2s;
+}
+.main__img{
+	width: 218px;
+	height: 341px;	
+}
+.main__first-card{
+	box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+	transform: rotate(11.9deg);
+}
+.main__second-card{
+	box-shadow: -2px 0px 1px rgba(0, 0, 0, 0.3), 0px 4px 4px rgba(0, 0, 0, 0.25);
+	transform: rotate(39.26deg);
+}
+
+.easy-level{
+	display: flex;
+    justify-content: center;    
+    align-items: center;
+    height: 100vh;
+}
+.middle-level, .hard-level{
+    display: flex;
+    justify-content: center;
+}
+.middle-level__total{
+	display: flex;
+    flex-wrap: wrap;
+    width: 700px;
+    height: 100vh;
+    align-content: center;
+}
+.hard-level__total{
+	display: flex;
+    flex-wrap: wrap;
+    width: 1300px;
+    height: 100vh;
+    align-content: center;
+}
+
+.flip-card {
+ 	position: relative;
+ 	width: 218px;
+	height: 341px;
+	margin-right: 2%;  	
+	margin-bottom: 2%;
+  	transition: transform 0.8s;
+  	transform-style: preserve-3d;  
+  	box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+.flip-card:hover {
+	cursor: pointer;
+	box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+	transform: translate(-7px, -40px) rotate(-3.08deg);
+}
+.flip-card-front, .flip-card-back {
+  	position: absolute;
+ 	width: 100%;
+  	height: 100%;
+  	-webkit-backface-visibility: hidden; 
+  	backface-visibility: hidden;
+}
+.flip, .flip:hover{ 
+	transform: rotateY(180deg);
+}
+
+.hide{
+	display:none;
+}
+
+.non-clickable{
+	pointer-events: none;
+}
